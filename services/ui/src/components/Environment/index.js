@@ -1,23 +1,17 @@
 import React from 'react';
 
 export default ({ environment }) => (
-  <table border="1" style={{margin: '10px'}}>
-    <thead>
-    <tr>
-      <th colSpan="2">
-        {environment.name}
-      </th>
-    </tr>
-    </thead>
-    <tbody>
-    {Object.keys(environment)
-      .filter(key => ['name', '__typename'].includes(key) ? false: true)
-      .map(key => (
-      <tr key={key}>
-        <td>{key}</td>
-        <td>{environment[key]}</td>
-      </tr>
-    ))}
-    </tbody>
-  </table>
+  <div>
+    <label>Environment Type</label>
+    <div>{environment.environmentType}</div>
+
+    <label>Deployment Type</label>
+    <div>{environment.deployType}</div>
+
+    <label>Created</label>
+    <div>{environment.created}</div>
+
+    <label>Last Deploy</label>
+    <div>{environment.updated}</div>
+  </div>
 );
