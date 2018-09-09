@@ -31,3 +31,6 @@ environments:
       logs-db: services/logs-db/.lagoon.cluster.yml
     rollouts:
       logs-db: statefulset
+  develop:
+    types:
+      logs-collector: none
