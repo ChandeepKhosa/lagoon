@@ -20,7 +20,6 @@ module.exports = {
     [
       '@babel/transform-runtime',
       {
-        polyfill: false,
         regenerator: false,
       },
     ],
